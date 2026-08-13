@@ -1,0 +1,36 @@
+int red = 2; 
+int yel = 4; 
+int gr  = 6; 
+void setup() { 
+  pinMode(red, OUTPUT); 
+  pinMode(yel, OUTPUT); 
+  pinMode(gr , OUTPUT); 
+} 
+ 
+void loop()  
+{ 
+  digitalWrite(red, HIGH); 
+  delay(20000); 
+  ledFor(red, 5); 
+  digitalWrite(red, LOW); 
+   
+  digitalWrite(yel, HIGH); 
+  delay(5000); 
+  digitalWrite(yel, LOW); 
+  
+  digitalWrite(gr, HIGH); 
+  delay(20000); 
+  ledFor (gr, 5 ); 
+  digitalWrite(gr, LOW); 
+   
+  digitalWrite(yel, HIGH); 
+  delay(5000); 
+  digitalWrite(yel, LOW); 
+  } 
+void ledFor(int led , int count ) { 
+for (int i = 0; i < count; i++) { 
+digitalWrite(led, LOW);   
+delay(500);                  
+digitalWrite(led, HIGH);  
+delay(500);} 
+}
